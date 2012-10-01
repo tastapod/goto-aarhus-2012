@@ -11,19 +11,35 @@ $(function fetchSummaries() {
 });
 </script>
 </head>
-<body>
+<body class="well">
 <h1>Local Area Guide <small>GOTO Aarhus</small></h1>
-<section id="new-summary">
-<form action="#">
-    <label for="input-description">Description</label>
-    <input type="text" id="input-description">
-    <label for="input-url">URL</label>
-    <input type="text" id="input-url">
-    <input type="submit">
-</form>
+<section id="new-summary" class="well">
+    <h2>Add a venue</h2>
+    <form class="form-horizontal" action="#">
+        <div class="control-group">
+            <label class="control-label" for="input-description"
+                title="Description of the venue">Description</label>
+            <div class="controls">
+                <input type="text" id="input-description">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="input-url"
+                title="Website of the venue">URL</label>
+            <div class="controls">
+                <input type="text" id="input-url">
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit">
+            </div>
+        </div>
+    </form>
 </section>
-<section id="summary">
-    <ul>
+<section id="summary" class="well"  >
+    <h2>Summary of venues</h2>
+    <ul class="unstyled">
         <li><a href="http://bobscafe.dk">Bob's Cafe</a></li>
     </ul>
 </section>
