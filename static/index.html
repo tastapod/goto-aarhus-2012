@@ -2,25 +2,12 @@
 <html>
 <head>
 <title>GOTO Aarhus venue guide</title>
-<script src="jquery/jquery-1.8.2.js"></script>
+<script src="/jquery/jquery-1.8.2.js"></script>
+<script src="/summary.js"></script>
 <script>
-    function addSummaryItem(item) {
-        var container = $('#summary ul'),
-            itemTemplate = $('#templates .summary-item');
-
-        var newItem = itemTemplate.clone().appendTo(container);
-        newItem.find('.url').attr('href', item.url);
-        newItem.find('.description').text(item.description);
-    }
-
-    function setSummaries(summaries) {
-        $('#summary ul').empty();
-        summaries.forEach(addSummaryItem);
-    }
-
-    $(function fetchSummaries() {
-        $.getJSON('/summaries', setSummaries);
-    });
+$(function fetchSummaries() {
+    $.getJSON('/summaries', setSummaries);
+});
 </script>
 </head>
 <body>
